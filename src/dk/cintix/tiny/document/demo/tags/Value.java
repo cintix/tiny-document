@@ -1,4 +1,4 @@
-package dk.cintix.tiny.document.tags;
+package dk.cintix.tiny.document.demo.tags;
 
 import dk.cintix.tiny.document.Tag;
 import java.io.InputStream;

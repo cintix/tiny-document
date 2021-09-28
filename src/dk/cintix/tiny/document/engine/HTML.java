@@ -18,14 +18,22 @@ public class HTML extends Document {
         super(data);
     }
 
+    public HTML() {
+        super("");
+    }
+
     @Override
     public String process() {
         return null;
     }
 
     @Override
-    public String getPattern() {
-        return "<?>";
+    public String getPattern(String name) {
+        return "(?i)<" + name + "([^>]+)>(.+?)</" + name + ">";
     }
-    
+
+    @Override
+    public String getPatternSingle(String name) {
+        return "(?i)<" + name + "([^>]+) />";
+    }
 }
