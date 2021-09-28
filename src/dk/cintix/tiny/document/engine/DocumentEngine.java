@@ -27,9 +27,8 @@ public class DocumentEngine {
     public byte[] process(Document document) {
         ByteArrayOutputStream content = new ByteArrayOutputStream();
         List<DocumentPart> parts = new LinkedList<>();
-        
+
         // Find Parts
-        
         Collections.sort(parts, documentPartComparator);
         for (DocumentPart part : parts) {
             // DO 
@@ -70,6 +69,7 @@ public class DocumentEngine {
     }
 
     private class DocumentPartComparator implements Comparator<DocumentPart> {
+
         @Override
         public int compare(DocumentPart d, DocumentPart d2) {
             if (d2.getIndex() < d.getIndex()) {
