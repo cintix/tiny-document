@@ -23,11 +23,6 @@ public class HTML extends Document {
     }
 
     @Override
-    public String process() {
-        return null;
-    }
-
-    @Override
     public String getPattern(String name) {
         return "(?i)<" + name + "([^>]+)>(.+?)</" + name + ">";
     }

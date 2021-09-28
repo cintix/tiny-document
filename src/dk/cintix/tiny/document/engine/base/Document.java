@@ -21,9 +21,12 @@ public abstract class Document {
         this.data = data;
     }
 
-    public abstract String getPattern(String name);
-    public abstract String getPatternSingle(String name);
+    public String getData() {
+        return data;
+    }
 
-    public abstract String process();
+    public abstract String getPattern(String name);
+
+    public abstract String getPatternSingle(String name);
 
 }
